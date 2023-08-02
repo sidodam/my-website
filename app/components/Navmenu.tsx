@@ -1,14 +1,7 @@
 "use client";
 import Link from "next/link";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
-import localFont from "@next/font/local";
 import Logo from "./Logo";
-
-const openSansExtraBold = localFont({
-  src: "../public/Monoton-Regular.ttf",
-});
 
 const Navmenu = () => {
   return (

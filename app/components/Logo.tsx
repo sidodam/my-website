@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import localFont from "@next/font/local";
 import Link from "next/link";
 const openSansExtraBold = localFont({
-  src: "../public/Monoton-Regular.ttf",
+  src: "../../public/Monoton-Regular.ttf",
 });
 
 function FadeInWhenVisible({ children }: { children: ReactNode }) {
