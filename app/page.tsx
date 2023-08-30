@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import ImageAndText from "./components/ImageAndText";
+import ScrollingCards from "./components/ScrollingCards";
 
 import meirlAnimation from "../public/meirl.json";
 const page = () => {
@@ -19,6 +20,43 @@ const page = () => {
       };
     },
   };
+
+  const items = [
+    {
+      title: "Item 1",
+      description: "Description for Item 1",
+    },
+    {
+      title: "Item 2",
+      description: "Description for Item 2",
+    },
+    {
+      title: "Item 3",
+      description: "Description for Item 3",
+    },
+    ,
+    {
+      title: "Item 3",
+      description: "Description for Item 3",
+    },
+    ,
+    {
+      title: "Item 3",
+      description: "Description for Item 3",
+    },
+    ,
+    {
+      title: "Item 3",
+      description: "Description for Item 3",
+    },
+    ,
+    {
+      title: "Item 3",
+      description: "Description for Item 3",
+    },
+
+    // Add more items as needed
+  ];
 
   return (
     <div className="">
@@ -77,7 +115,7 @@ const page = () => {
             repeat: 2,
             repeatType: "reverse",
           }}
-          className=" text-[#275E68] md:absolute md:left-[20.5rem]  "
+          className=" text-[#275E68] md:absolute md:left-[19.5rem] md:top-[33rem]  "
         >
           SCROLL
         </motion.span>
@@ -98,7 +136,7 @@ const page = () => {
       <div className="">
         <ImageAndText
           image="/bilingual.svg"
-          title="Language Skills"
+          title="Language proficiency"
           className=" md:!flex-row-reverse"
         >
           I speak both <strong>English</strong> and <strong>Spanish</strong>{" "}
@@ -109,7 +147,7 @@ const page = () => {
 
       <div className="mt-20">
         <ImageAndText image="/global.svg" title="Global Mindset" className="">
-          am ready to take on new challenges and embark on exciting
+          I&#39;m ready to take on new challenges and embark on exciting
           opportunities around the world. Working abroad excites me, as it
           offers the chance to immerse myself in different cultures and learn
           from a wide range of perspectives.
@@ -124,9 +162,14 @@ const page = () => {
         >
           If you are looking for a dedicated and motivated junior web developer
           who is ready to make a positive impact, I would love to be part of
-          your team. Let's join forces and create something extraordinary
+          your team. Let&lsquos join forces and create something extraordinary
           together!
         </ImageAndText>
+
+        <h2 className="md:text-center mt-32 text-[#214F59]  font-semibold">
+          PROGRAMMING LANGUAGES
+        </h2>
+        <ScrollingCards></ScrollingCards>
       </div>
     </div>
   );

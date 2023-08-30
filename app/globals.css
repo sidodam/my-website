@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,6 +16,10 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+/* html{
+  font-size: 15px;
+} */
 
 body{
   background-color: #e7f4f6;
@@ -41,3 +46,4 @@ body{
   background-size: 100% 3px;
   background-position: 0 100%
 }
+
