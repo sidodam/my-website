@@ -167,9 +167,16 @@ const page = () => {
         </ImageAndText>
 
         <h2 className="md:text-center mt-32 text-[#214F59]  font-semibold">
-          PROGRAMMING LANGUAGES
+          PROGRAMMING LANGUAGES & LIBRARIES
         </h2>
         <ScrollingCards></ScrollingCards>
+
+        <footer>
+          <p className="text-xs ml-4 text-[#505050]">
+            {" "}
+            Copyright © 2023 Asid Kouki®. All rights reserved.
+          </p>
+        </footer>
       </div>
     </div>
   );

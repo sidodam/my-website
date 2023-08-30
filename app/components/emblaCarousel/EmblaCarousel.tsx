@@ -38,28 +38,32 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const items = [
     <CardContent
       key={1}
-      title="Noteworthy technology acquisitions 2021"
-      description="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-      imagesrc="/java.jpg"
+      imagesrc="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript_256x256.png"
     />,
+
     <CardContent
-      key={2}
-      title="Noteworthy technology acquisitions 2021"
-      description="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-      imagesrc="/java.jpg"
+      key={1}
+      imagesrc="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python_256x256.png"
     />,
+
     <CardContent
-      key={3}
-      title="Noteworthy technology acquisitions 2021"
-      description="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-      imagesrc="/java.jpg"
+      key={1}
+      imagesrc="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/csharp/csharp_256x256.png"
     />,
+
     <CardContent
-      key={4}
-      title="Noteworthy technology acquisitions 2021"
-      description="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-      imagesrc="/java.jpg"
+      key={1}
+      imagesrc="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/java/java_256x256.png"
     />,
+
+    <CardContent
+      key={1}
+      imagesrc="https://cdn.jsdelivr.net/npm/programming-languages-logos/src/typescript/typescript_256x256.png"
+    />,
+
+    <CardContent key={1} imagesrc="/react.png" />,
+    <CardContent key={1} imagesrc="/nextjs.svg" />,
+    <CardContent key={1} imagesrc="/tailwind.svg" />,
   ];
 
   return (
