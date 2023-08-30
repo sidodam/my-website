@@ -21,43 +21,6 @@ const page = () => {
     },
   };
 
-  const items = [
-    {
-      title: "Item 1",
-      description: "Description for Item 1",
-    },
-    {
-      title: "Item 2",
-      description: "Description for Item 2",
-    },
-    {
-      title: "Item 3",
-      description: "Description for Item 3",
-    },
-    ,
-    {
-      title: "Item 3",
-      description: "Description for Item 3",
-    },
-    ,
-    {
-      title: "Item 3",
-      description: "Description for Item 3",
-    },
-    ,
-    {
-      title: "Item 3",
-      description: "Description for Item 3",
-    },
-    ,
-    {
-      title: "Item 3",
-      description: "Description for Item 3",
-    },
-
-    // Add more items as needed
-  ];
-
   return (
     <div className="">
       <motion.div
@@ -67,11 +30,11 @@ const page = () => {
           ease: "linear",
           duration: 0.5,
         }}
-        className="flex justify-between h-fit  mx-32 items-center"
+        className="flex justify-between h-fit  md:mx-32 mx-4 items-center"
       >
         <div className="flex flex-col">
           <div className="flex items-end">
-            <h1 className="text-[#275E68]  mt-36 text-7xl ">
+            <h1 className="text-[#275E68]  mt-36 md:text-7xl text-2xl ">
               Hi, my <br></br>
               name is <strong>Asid Kouki</strong>{" "}
               <span className="-ml-4">.</span>
@@ -166,7 +129,7 @@ const page = () => {
           together!
         </ImageAndText>
 
-        <h2 className="md:text-center mt-32 text-[#214F59]  font-semibold">
+        <h2 className="text-center mt-32 text-[#214F59]   font-semibold">
           PROGRAMMING LANGUAGES & LIBRARIES
         </h2>
         <ScrollingCards></ScrollingCards>

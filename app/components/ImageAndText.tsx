@@ -33,13 +33,12 @@ function ImageAndText({
   title,
   className,
   imageClassName,
-  twentyM,
   textClassName,
 }: ImageAndTextProps) {
   return (
     <FadeInWhenVisible>
       <div
-        className={`flex md:flex-row flex-col items-center justify-between gap-40  mx-48  ${className}`}
+        className={`flex md:flex-row flex-col items-center justify-between gap-40  md:mx-48  ${className}`}
       >
         <div className={`md:w-1/2 ${textClassName}   mx-5  m-auto `}>
           <p className="font-bold mb-5 text-3xl text-center text-slate-600  ">
@@ -52,7 +51,7 @@ function ImageAndText({
           </div>
         </div>
 
-        <div className={`md:w-1/2 ${imageClassName} `}>
+        <div className={`md:w-1/2 w-full ${imageClassName} `}>
           <img src={image}></img>
         </div>
       </div>

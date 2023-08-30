@@ -4,10 +4,13 @@ import Logo from "./Logo";
 
 const Navmenu = () => {
   return (
-    <nav className="p-4 bg-[#F7F7F7] sticky top-0 z-50">
-      <ul className=" flex gap-4 justify-between  mx-32">
-        <Logo></Logo>
-        <div className="flex gap-20 items-center">
+    <nav className="p-4 bg-[#F7F7F7] sticky top-0 z-50 ">
+      <ul className=" relative flex gap-4 md:justify-between justify-around  md:mx-32">
+        <div className="md:block hidden">
+          <Logo></Logo>
+        </div>
+
+        <div className="flex gap-20 items-center ">
           <li className=" text-lg cursor-pointer">
             <Link
               href="/cv.pdf"
@@ -21,7 +24,7 @@ const Navmenu = () => {
           </li>
           <li className=" text-lg">
             <Link
-              href="https://github.com/sido27"
+              href="https://github.com/sidodam"
               passHref={true}
               target="_blank"
               className="text-[#11282D] hover:text-[#388394] text-xl relative group"
