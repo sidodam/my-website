@@ -4,8 +4,8 @@ import Logo from "./Logo";
 
 const Navmenu = () => {
   return (
-    <nav className="p-4 bg-[#F7F7F7] sticky top-0 z-50 ">
-      <ul className=" relative flex gap-4 md:justify-between justify-around  md:mx-32">
+    <nav className="p-4  bg-[#F7F7F7] sticky top-0 z-50 ">
+      <ul className=" flex md:justify-between justify-around  md:mx-32">
         <div className="md:block hidden">
           <Logo></Logo>
         </div>
