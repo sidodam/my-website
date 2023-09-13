@@ -35,7 +35,7 @@ const Navmenu = () => {
           </li>
           <li className=" text-lg">
             <Link
-              href="mailto:test@email.com"
+              href="mailto:sidokouki1@gmail.com"
               className="text-[#11282D] hover:text-[#79CD7D] text-xl relative group"
             >
               Contact
