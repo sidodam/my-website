@@ -125,7 +125,7 @@ const page = () => {
         >
           If you are looking for a dedicated and motivated junior web developer
           who is ready to make a positive impact, I would love to be part of
-          your team. Let&lsquos join forces and create something extraordinary
+          your team. Let&#39;s join forces and create something extraordinary
           together!
         </ImageAndText>
 
