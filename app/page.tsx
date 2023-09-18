@@ -132,6 +132,10 @@ const page = () => {
         <h2 className="text-center mt-32 text-[#214F59]   font-semibold">
           PROGRAMMING LANGUAGES & LIBRARIES
         </h2>
+
+        <h3 className="text-center mt-2 text-[#214F59] text-xs ">
+          INCLUDING BUT NOT LIMITED TO
+        </h3>
         <ScrollingCards></ScrollingCards>
 
         <footer>
