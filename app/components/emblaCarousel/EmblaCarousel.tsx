@@ -65,6 +65,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <CardContent key={1} imagesrc="/dotnet.png" />,
 
     <CardContent key={1} imagesrc="/react.png" />,
+    <CardContent key={1} imagesrc="/angular.png" />,
+
     <CardContent key={1} imagesrc="/nextjs.svg" />,
     <CardContent key={1} imagesrc="/tailwind.svg" />,
   ];
