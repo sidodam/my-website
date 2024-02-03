@@ -23,6 +23,11 @@ const Navmenu = () => {
     es: "CONTACTO",
   };
 
+  const pdfUrls = {
+    en: "/cv.pdf",
+    es: "/curriculum.pdf",
+  };
+
   return (
     <nav className="p-4  bg-[#F7F7F7] sticky top-0 z-50 ">
       <ul className=" flex md:justify-between justify-center  lg:mx-32 items-baseline ">
@@ -33,7 +38,7 @@ const Navmenu = () => {
         <div className=" flex gap-20 items-center ">
           <li className=" text-lg cursor-pointer">
             <Link
-              href="/cv.pdf"
+              href={pdfUrls[lang.currentLang]}
               target="_blank"
               download="cv"
               className="text-[#11282D] hover:text-[#388394] text-xl relative group"
