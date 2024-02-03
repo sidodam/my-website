@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import ImageAndText from "./components/ImageAndText";
 import ScrollingCards from "./components/ScrollingCards";
-
 import meirlAnimation from "../public/meirl.json";
+import useLangStore from "./components/langStore";
+import { Component } from "react";
 const page = () => {
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
@@ -21,6 +22,82 @@ const page = () => {
     },
   };
 
+  const lang = useLangStore((state) => ({
+    currentLang: state.currentLang,
+  }));
+
+  const translations = {
+    en: {
+      profession: (
+        <>
+          I&#39;m a <strong>Full stack junior developer</strong> from Spain.
+        </>
+      ),
+
+      scrollText: "SCROLL",
+      languageProficiencyTitle: "Language proficiency",
+      languageProficiencyText: (
+        <>
+          {" "}
+          I speak both <strong>English</strong> and <strong>Spanish</strong>{" "}
+          fluently, which allows me to connect with a broader audience and
+          collaborate seamlessly with diverse teams.{" "}
+        </>
+      ),
+      globalMindsetTitle: "Global Mindset",
+      globalMindsetText: (
+        <>
+          {" "}
+          I&#39;m ready to take on new challenges and embark on exciting
+          opportunities around the world. Working abroad excites me, as it
+          offers the chance to immerse myself in different cultures and learn
+          from a wide range of perspectives.
+        </>
+      ),
+      letsWorkTogetherTitle: "Let's Work Together!",
+      letsWorkTogetherText: (
+        <>
+          {" "}
+          If you are looking for a dedicated and motivated junior web developer
+          who is ready to make a positive impact, I would love to be part of
+          your team. Let&#39;s join forces and create something extraordinary
+          together!
+        </>
+      ),
+      programmingLanguagesTitle: "PROGRAMMING LANGUAGES & LIBRARIES",
+      includingButNotLimitedTo: "INCLUDING BUT NOT LIMITED TO",
+      copyrightText: "Copyright © 2024 Asid Kouki®. All rights reserved.",
+    },
+    // Add translations for other languages as needed
+    es: {
+      profession: (
+        <>
+          Soy un <strong>desarrollador Full Stack junior completa</strong> de
+          España.{" "}
+        </>
+      ),
+
+      scrollText: "DESPLAZARSE",
+      languageProficiencyText: (
+        <>
+          Hablo <strong>Inglés</strong> y <strong>Español</strong> con fluidez,
+          lo que me permite conectar con una audiencia más amplia y colaborar de
+          manera fluida con equipos diversos.
+        </>
+      ),
+      globalMindsetTitle: "Mentalidad global",
+      globalMindsetText:
+        "Estoy listo para enfrentar nuevos retos y aprovechar oportunidades emocionantes en todo el mundo. Trabajar en el extranjero me entusiasma, ya que me brinda la oportunidad de sumergirme en diferentes culturas y aprender de una amplia variedad de perspectivas.",
+      letsWorkTogetherTitle: "!Vamos a trabajar juntos!",
+      letsWorkTogetherText:
+        "Si estás buscando a un desarrollador web junior dedicado y motivado, listo para hacer un impacto positivo, me encantaría formar parte de tu equipo. ¡Unamos fuerzas y creemos algo extraordinario juntos!",
+      programmingLanguagesTitle: "LENGUAJES DE PROGRAMACIÓN Y BIBLIOTECAS",
+      includingButNotLimitedTo: "INCLUYENDO PERO NO LIMITADO A",
+      copyrightText:
+        "Derechos de autor © 2024 Asid Kouki®. Todos los derechos reservados.",
+    },
+  };
+
   return (
     <div className="">
       <motion.div
@@ -34,10 +111,11 @@ const page = () => {
       >
         <div className="flex flex-col">
           <div className="flex items-end">
-            <h1 className="text-[#275E68]  mt-36 md:text-7xl text-2xl ">
-              Hi, my <br></br>
-              name is <strong>Asid Kouki</strong>{" "}
-              <span className="-ml-4">.</span>
+            <h1 className="text-[#275E68]  mt-36 md:text-7xl text-2xl !leading-tight">
+              {lang.currentLang === "en"
+                ? "Hi, my name is"
+                : "Hola, mi nombre es"}{" "}
+              <br></br> <strong>Asid Kouki.</strong>
             </h1>
 
             <motion.span
@@ -56,8 +134,8 @@ const page = () => {
             </motion.span>
           </div>
 
-          <p className="text-[#275E68] text-2xl  mt-10 tracking-wide">
-            I&#39;m a <strong>Full stack junior developer</strong> from Spain.
+          <p className="text-[#275E68] text-2xl  mt-6 tracking-wide">
+            {translations[lang.currentLang].profession}
           </p>
         </div>
 
@@ -66,7 +144,7 @@ const page = () => {
         </div>
       </motion.div>
 
-      <div className="text-center md:ml-40  md:-mt-20">
+      <div className="text-center hidden md:block  md:absolute md:left-[19.5rem] md:top-[33rem] my-20">
         <motion.span
           initial={{ y: 0, opacity: 0 }}
           animate={{
@@ -78,9 +156,9 @@ const page = () => {
             repeat: 2,
             repeatType: "reverse",
           }}
-          className=" text-[#275E68] md:absolute md:left-[19.5rem] md:top-[33rem]  "
+          className=" text-[#275E68]  "
         >
-          SCROLL
+          {translations[lang.currentLang].scrollText}
         </motion.span>
 
         <motion.svg initial="hidden" animate="visible" height="400" width="400">
@@ -96,24 +174,19 @@ const page = () => {
         </motion.svg>
       </div>
 
-      <div className="">
+      <div className="md:mt-96 mt-8">
         <ImageAndText
           image="/bilingual.svg"
           title="Language proficiency"
           className=" md:!flex-row-reverse"
         >
-          I speak both <strong>English</strong> and <strong>Spanish</strong>{" "}
-          fluently, which allows me to connect with a broader audience and
-          collaborate seamlessly with diverse teams.
+          {translations[lang.currentLang].languageProficiencyText}
         </ImageAndText>
       </div>
 
       <div className="mt-20">
         <ImageAndText image="/global.svg" title="Global Mindset" className="">
-          I&#39;m ready to take on new challenges and embark on exciting
-          opportunities around the world. Working abroad excites me, as it
-          offers the chance to immerse myself in different cultures and learn
-          from a wide range of perspectives.
+          {translations[lang.currentLang].globalMindsetText}
         </ImageAndText>
       </div>
 
@@ -123,25 +196,22 @@ const page = () => {
           title="Let's Work Together!"
           className=" md:!flex-row-reverse"
         >
-          If you are looking for a dedicated and motivated junior web developer
-          who is ready to make a positive impact, I would love to be part of
-          your team. Let&#39;s join forces and create something extraordinary
-          together!
+          {translations[lang.currentLang].letsWorkTogetherText}
         </ImageAndText>
 
         <h2 className="text-center mt-32 text-[#214F59]   font-semibold">
-          PROGRAMMING LANGUAGES & LIBRARIES
+          {translations[lang.currentLang].programmingLanguagesTitle}
         </h2>
 
         <h3 className="text-center mt-2 text-[#214F59] text-xs ">
-          INCLUDING BUT NOT LIMITED TO
+          {translations[lang.currentLang].includingButNotLimitedTo}
         </h3>
         <ScrollingCards></ScrollingCards>
 
         <footer>
-          <p className="text-xs ml-4 text-[#505050]">
+          <p className="text-xs text-center text-[#505050]">
             {" "}
-            Copyright © 2023 Asid Kouki®. All rights reserved.
+            {translations[lang.currentLang].copyrightText}
           </p>
         </footer>
       </div>
