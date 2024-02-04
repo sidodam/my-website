@@ -72,8 +72,7 @@ const page = () => {
     es: {
       profession: (
         <>
-          Soy un <strong>desarrollador Full Stack junior completa</strong> de
-          España.{" "}
+          Soy un <strong>desarrollador Full Stack junior</strong> de España.{" "}
         </>
       ),
 
@@ -115,7 +114,8 @@ const page = () => {
               {lang.currentLang === "en"
                 ? "Hi, my name is"
                 : "Hola, mi nombre es"}{" "}
-              <br></br> <strong>Asid Kouki.</strong>
+              <br></br>{" "}
+              <strong className="whitespace-nowrap">Asid Kouki.</strong>
             </h1>
 
             <motion.span

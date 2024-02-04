@@ -35,7 +35,7 @@ const Navmenu = () => {
           <Logo></Logo>
         </div>
 
-        <div className=" flex gap-20 items-center ">
+        <div className=" flex flex-col md:flex-row gap-2 md:gap-10 items-center">
           <li className=" text-lg cursor-pointer">
             <Link
               href={pdfUrls[lang.currentLang]}
