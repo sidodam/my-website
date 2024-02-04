@@ -3,6 +3,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { useState } from "react";
 import useLangStore from "./langStore";
+import Image from "next/image";
 
 const Navmenu = () => {
   const languages = ["en", "es"];
@@ -80,9 +81,11 @@ const Navmenu = () => {
                 }`}
                 role="menuitem"
               >
-                <img
-                  src={`/${language}.png`} // Assuming you have "en.png" and "es.png" for flags
-                  alt=""
+                <Image
+                  src={`/${language}.png`}
+                  alt={`Flag for ${language}`}
+                  width={24} // Set the desired width
+                  height={16} // Set the desired height
                   className="w-6 h-4 mr-1"
                 />
               </button>

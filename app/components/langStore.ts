@@ -6,7 +6,7 @@ interface LangState {
 }
 
 const useLangStore = create<LangState>((set) => ({
-  currentLang: "en",
+  currentLang: "en", //default
   setCurrentLang: (lang) => set({ currentLang: lang }),
 }));
 
