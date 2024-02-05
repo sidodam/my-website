@@ -78,6 +78,7 @@ const page = () => {
       ),
 
       scrollText: "DESPLAZARSE",
+      languageProficiencyTitle: "Competencia lingüística",
       languageProficiencyText: (
         <>
           Hablo <strong>Inglés</strong> y <strong>Español</strong> con fluidez,
@@ -178,7 +179,7 @@ const page = () => {
       <div className="md:mt-96 mt-8">
         <ImageAndText
           image="/bilingual.svg"
-          title="Language proficiency"
+          title={translations[lang.currentLang].languageProficiencyTitle}
           className=" md:!flex-row-reverse"
         >
           {translations[lang.currentLang].languageProficiencyText}
@@ -186,7 +187,11 @@ const page = () => {
       </div>
 
       <div className="mt-20">
-        <ImageAndText image="/global.svg" title="Global Mindset" className="">
+        <ImageAndText
+          image="/global.svg"
+          title={translations[lang.currentLang].globalMindsetTitle}
+          className=""
+        >
           {translations[lang.currentLang].globalMindsetText}
         </ImageAndText>
       </div>
@@ -194,7 +199,7 @@ const page = () => {
       <div className="mt-20">
         <ImageAndText
           image="/backedup.svg"
-          title="Let's Work Together!"
+          title={translations[lang.currentLang].letsWorkTogetherTitle}
           className=" md:!flex-row-reverse"
         >
           {translations[lang.currentLang].letsWorkTogetherText}
