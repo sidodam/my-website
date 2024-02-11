@@ -5,7 +5,6 @@ import ImageAndText from "./components/ImageAndText";
 import ScrollingCards from "./components/ScrollingCards";
 import meirlAnimation from "../public/meirl.json";
 import useLangStore from "./components/langStore";
-import { Component } from "react";
 const page = () => {
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
@@ -97,6 +96,39 @@ const page = () => {
       copyrightText:
         "Derechos de autor © 2024 Asid Kouki®. Todos los derechos reservados.",
     },
+
+    //DEUTSCH
+
+    de: {
+      profession: (
+        <>
+          Ich bin ein <strong>Full Stack Entwickler</strong> aus Spanien.{" "}
+        </>
+      ),
+
+      scrollText: "SCROLLEN",
+      languageProficiencyTitle: "Sprachkenntnisse",
+      languageProficiencyText: (
+        <>
+          {" "}
+          Ich spreche sowohl<strong> Englisch</strong> als auch{" "}
+          <strong> Spanisch </strong>
+          fließend, was es mir ermöglicht, eine breitere Zielgruppe anzusprechen
+          und nahtlos mit vielfältigen Teams zusammenzuarbeiten. Zurzeit lerne
+          ich Deutsch.
+        </>
+      ),
+      globalMindsetTitle: "Globale Mentalität",
+      globalMindsetText:
+        "Ich bin bereit, aus Spanien wegzuziehen und an meinem Arbeitsort zu leben, sei es in Deutschland oder anderswo.",
+      letsWorkTogetherTitle: "lassen Sie uns zusammenarbeiten!",
+      letsWorkTogetherText:
+        "Wenn Sie nach einem engagierten und motivierten Junior-Webentwickler suchen, der bereit ist, einen positiven Beitrag zu leisten, würde ich gerne Teil Ihres Teams sein.!",
+      programmingLanguagesTitle: "PROGRAMMIERSPRACHEN UND BIBLIOTHEKEN",
+      includingButNotLimitedTo: "EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF",
+      copyrightText:
+        "Urheberrecht © 2024 Asid Kouki®. Alle Rechte vorbehalten.",
+    },
   };
 
   return (
@@ -115,7 +147,9 @@ const page = () => {
             <h1 className="text-[#275E68]  mt-36 md:text-7xl text-2xl !leading-tight">
               {lang.currentLang === "en"
                 ? "Hi, my name is"
-                : "Hola, mi nombre es"}{" "}
+                : lang.currentLang === "es"
+                ? "Hola, mi nombre es"
+                : "Hallo,Ich heiße"}{" "}
               <br></br>{" "}
               <strong className="whitespace-nowrap">Asid Kouki.</strong>
             </h1>

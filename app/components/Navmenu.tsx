@@ -6,7 +6,7 @@ import useLangStore from "./langStore";
 import Image from "next/image";
 
 const Navmenu = () => {
-  const languages = ["en", "es"];
+  const languages = ["en", "de", "es"];
   const [currentLanguage, setCurrentLanguage] = useState("en");
 
   const lang = useLangStore((state) => ({
@@ -22,11 +22,13 @@ const Navmenu = () => {
   const translations = {
     en: "CONTACT",
     es: "CONTACTO",
+    de: "KONTAKT",
   };
 
   const pdfUrls = {
     en: "/cv.pdf",
     es: "/curriculum.pdf",
+    de: "/CVaufDeutesch.pdf",
   };
 
   return (
@@ -84,8 +86,8 @@ const Navmenu = () => {
                 <Image
                   src={`/${language}.png`}
                   alt={`Flag for ${language}`}
-                  width={24} // Set the desired width
-                  height={16} // Set the desired height
+                  width={24}
+                  height={16}
                   className="w-6 h-4 mr-1"
                 />
               </button>
