@@ -127,7 +127,7 @@ const page = () => {
       programmingLanguagesTitle: "PROGRAMMIERSPRACHEN UND BIBLIOTHEKEN",
       includingButNotLimitedTo: "EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF",
       copyrightText:
-        "Urheberrecht © 2024 Asid Kouki®. Alle Rechte vorbehalten.",
+        "Urheberrecht © 2024 Asid Kouki Aiwaz®. Alle Rechte vorbehalten.",
     },
   };
 
@@ -151,7 +151,7 @@ const page = () => {
                 ? "Hola, mi nombre es"
                 : "Hallo,Ich heiße"}{" "}
               <br></br>{" "}
-              <strong className="whitespace-nowrap">Asid Kouki.</strong>
+              <strong className="whitespace-nowrap">Asid Kouki Aiwaz.</strong>
             </h1>
 
             <motion.span
