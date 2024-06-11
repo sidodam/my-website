@@ -25,6 +25,12 @@ const Navmenu = () => {
     de: "KONTAKT",
   };
 
+  const projects = {
+    en: "PROJECTS",
+    es: "PROYECTOS",
+    de: "PROJEKTE",
+  };
+
   const pdfUrls = {
     en: "/cv.pdf",
     es: "/curriculum.pdf",
@@ -44,7 +50,7 @@ const Navmenu = () => {
               href={pdfUrls[lang.currentLang]}
               target="_blank"
               download="cv"
-              className="text-[#11282D] hover:text-[#388394] text-xl relative group"
+              className="text-[#11282D] hover:text-[#dc6182] text-xl relative group"
             >
               CV
               <span className="absolute inset-x-0 bottom-0 h-[2px] bg-[#11282D] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
@@ -68,6 +74,16 @@ const Navmenu = () => {
             >
               {translations[lang.currentLang]}
               <span className="absolute inset-x-0 bottom-0 h-[2px] bg-[#11282D] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </Link>
+          </li>
+          <li className="text-lg">
+            <Link
+              href="/projects"
+              className="text-[#11282D] hover:text-[#6a65e9] text-xl relative group"
+            >
+              {projects[lang.currentLang]}
+              <span className="absolute inset-x-0 bottom-0 h-[2px] bg-[#11282D] transform scale-x-100 group-hover:scale-x-0 transition-transform origin-left duration-300"></span>
+              <span className="absolute inset-x-0 bottom-0 h-[2px] bg-[#6a65e9] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
             </Link>
           </li>
 
