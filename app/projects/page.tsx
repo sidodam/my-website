@@ -50,13 +50,13 @@ const projects = [
   {
     name: "Renfe booking Bot",
     descriptionIndex: 3,
-    isPublic: true,
+    isPublic: false,
     tags: ["Python", "Docker"],
   },
   {
     name: "My Portfolio",
     descriptionIndex: 4,
-    isPublic: false,
+    isPublic: true,
     tags: ["JavaScript", "NextJS", "TailwindCSS", "TypeScript"],
   },
   {
