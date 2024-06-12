@@ -74,21 +74,21 @@ const Page = () => {
 
   const translations = {
     en: {
-      projectsTitle: "My Projects",
+      projectsTitle: "My recent Projects",
       visitGithub: "Visit my GitHub",
       seeAllProjects: "to see all my projects.",
       publicRepo: "Public Repository",
       privateRepo: "Private Repository",
     },
     es: {
-      projectsTitle: "Mis Proyectos",
+      projectsTitle: "Mis proyectos recientes",
       visitGithub: "Visita mi GitHub",
       seeAllProjects: "para ver todos mis proyectos.",
       publicRepo: "Repositorio Público",
       privateRepo: "Repositorio Privado",
     },
     de: {
-      projectsTitle: "Meine Projekte",
+      projectsTitle: "Meine aktuellen Projekte",
       visitGithub: "Besuchen Sie mein GitHub",
       seeAllProjects: "um alle meine Projekte zu sehen.",
       publicRepo: "Öffentliches Repository",
