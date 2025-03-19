@@ -34,7 +34,7 @@ const Navmenu = () => {
   const pdfUrls = {
     en: "/cv.pdf",
     es: "/curriculum.pdf",
-    de: "/CVaufDeutesch.pdf",
+    de: "/Lebenslauf.pdf",
   };
 
   return (

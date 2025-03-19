@@ -9,22 +9,25 @@ const projectDescriptions = {
     3: "A Renfe bot to get around the annoying scarcity of places in the train (for those who have a subscription).",
     4: "My personal Portfolio.",
     5: "Another Mastermind Android game written in Kotlin.",
+    6: "Proxmox-based home server setup integrating RR Media Family, Changedetection.io for automation, Calibre for e-books, and PiKVM for remote management.",
   },
   es: {
-    0: "Bot de Telegram que obtiene listados de productos en tiempo real directamente de Wallapop (mercado online).",
-    1: "Simple Bot de Telegram que obtiene noticias recientes sobre acciones de Yahoo Finance.",
-    2: "Script de Python que tiene como objetivo replicar el enfoque de inversión descrito por James P. O'Shaughnessey utilizando las APIs de Yahoo Finance y Fivniz. Inspirado en una publicación de Reddit.",
-    3: "Un bot de Renfe para evitar la molesta escasez de lugares en el tren (para aquellos que tienen un abono).",
-    4: "Mi Portafolio personal.",
+    0: "Bot de Telegram que obtiene listados de productos en tiempo real directamente desde Wallapop (mercado en línea).",
+    1: "Bot de Telegram simple que obtiene noticias recientes sobre acciones desde Yahoo Finance.",
+    2: "Script de Python que busca replicar el enfoque de inversión descrito por James P. O'Shaughnessey usando las API de Yahoo Finance y Fivniz. Inspirado en una publicación de Reddit.",
+    3: "Un bot de Renfe para sortear la molesta escasez de plazas en el tren (para quienes tienen suscripción).",
+    4: "Mi portafolio personal.",
     5: "Otro juego de Mastermind para Android escrito en Kotlin.",
+    6: "Configuración de servidor doméstico basado en Proxmox, integrando RR Media Family, Changedetection.io para automatización, Calibre para libros electrónicos y PiKVM para administración remota.",
   },
   de: {
-    0: "Telegram-Bot, der Produktlisten in Echtzeit direkt von Wallapop (Online-Marktplatz) abruft.",
+    0: "Telegram-Bot, der Echtzeit-Produktlisten direkt von Wallapop (Online-Marktplatz) abruft.",
     1: "Einfacher Telegram-Bot, der aktuelle Börsennachrichten von Yahoo Finance abruft.",
-    2: "Python-Skript, das darauf abzielt, den von James P. O'Shaughnessey beschriebenen Investitionsansatz unter Verwendung der APIs von Yahoo Finance und Fivniz nachzubilden. Inspiriert von einem Reddit-Beitrag.",
-    3: "Ein Renfe-Bot, um der lästigen Knappheit an Plätzen im Zug (für diejenigen mit einem Abonnement) zu entgehen.",
+    2: "Python-Skript, das den von James P. O'Shaughnessey beschriebenen Investitionsansatz mithilfe der APIs von Yahoo Finance und Fivniz nachbilden soll. Inspiriert durch einen Reddit-Beitrag.",
+    3: "Ein Renfe-Bot, um die lästige Platzknappheit im Zug zu umgehen (für Abonnenten).",
     4: "Mein persönliches Portfolio.",
     5: "Ein weiteres Mastermind-Android-Spiel, geschrieben in Kotlin.",
+    6: "Proxmox-basierte Heimserver-Einrichtung mit RR Media Family, Changedetection.io zur Automatisierung, Calibre für E-Books und PiKVM zur Fernverwaltung.",
   },
 };
 
@@ -48,7 +51,7 @@ const projects = [
     tags: ["Python", "Docker"],
   },
   {
-    name: "Renfe booking Bot",
+    name: "Renfe booking Bot automation",
     descriptionIndex: 3,
     isPublic: false,
     tags: ["Python", "Docker"],
@@ -57,13 +60,13 @@ const projects = [
     name: "My Portfolio",
     descriptionIndex: 4,
     isPublic: true,
-    tags: ["JavaScript", "NextJS", "TailwindCSS", "TypeScript"],
+    tags: ["NextJS", "TailwindCSS", "TypeScript"],
   },
   {
-    name: "Mastermind",
-    descriptionIndex: 5,
-    isPublic: true,
-    tags: ["Kotlin"],
+    name: "Proxmox Server Setup",
+    descriptionIndex: 6,
+    isPublic: false,
+    tags: ["Proxmox", "Linux", "Automation", "Self-Hosting"],
   },
 ];
 
@@ -109,7 +112,7 @@ const Page = () => {
               className="bg-white rounded-lg shadow-md overflow-hidden relative"
             >
               <div className="p-6 mt-10">
-                <h2 className="text-2xl font-semibold mb-2 text-gray-800">
+                <h2 className="text-2xl font-semibold mb-2 text-gray-800 mt-8">
                   {project.name}
                 </h2>
                 <p className="text-gray-600 mb-12 text-base">
@@ -120,11 +123,11 @@ const Page = () => {
                   }
                 </p>
                 <div className="tags-container mb-4">
-                  <div className="flex flex-wrap absolute top-6 right-2">
+                  <div className="flex flex-wrap gap-2 absolute top-6 right-2 ">
                     {project.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="bg-indigo-100 text-indigo-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                        className="bg-indigo-100 text-indigo-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounde md mb-2"
                       >
                         {tag}
                       </span>
